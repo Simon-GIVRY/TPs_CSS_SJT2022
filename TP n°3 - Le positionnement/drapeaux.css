@@ -1,0 +1,237 @@
+/* TABLE DES STYLES     */
+/*                      */
+/* GLOBALS              */
+/*                      */
+/* drapeau france       */
+/* drapeau allemagne    */
+/* drapeau japon        */
+/* drapeau suisse       */
+/* drapeau nervege      */
+/* drapeau Bénin        */
+/* drapeau Cameroun     */
+
+
+/* GLOBALS */
+body {
+    margin: 0;
+    background-color: rgb(52, 52, 54);
+}
+
+.flag {
+    margin: 10px;
+}
+
+/* drapeau francais */
+
+.flag:first-of-type {
+    width: 500px;
+    height: 300px;
+    /*  background-color: pink; */
+    position: relative;
+    background-color: white;
+}
+
+.flag:first-of-type::before {
+    background-color: red;
+    content: " ";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 33%;
+    z-index: 1;
+
+}
+
+.flag:first-of-type::after {
+    background-color: blue;
+    content: " ";
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 33%;
+    z-index: 1;
+
+}
+
+/* fin drapeaux francais */
+
+
+/* drapeau allemand */
+.flag:nth-of-type(2) {
+    width: 500px;
+    height: 300px;
+    background-color: yellow;
+    position: relative;
+}
+
+.flag:nth-of-type(2)::before {
+    content: " ";
+    height: 33%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+
+}
+
+.flag:nth-of-type(2)::after {
+    content: " ";
+    height: 33%;
+    width: 100%;
+    background-color: red;
+    position: absolute;
+    top: 33%;
+}
+
+/* fin drapeau allemand */
+
+/* drapeau japonais */
+.flag:nth-of-type(3) {
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    position: relative;
+}
+
+.flag:nth-of-type(3)::before {
+    content: " ";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+/* fin drapeaux japon */
+
+/* drapeaux suisse */
+
+.flag:nth-of-type(4) {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    position: relative;
+}
+
+.flag:nth-of-type(4)::before {
+    content: " ";
+    background-color: white;
+    width: 250px;
+    height: 75px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+}
+
+.flag:nth-of-type(4)::after {
+    content: " ";
+    background-color: white;
+    width: 75px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+/* fin drapeau suisse */
+
+/* drapeau norvege */
+ 
+.flag:nth-of-type(5) {
+    position: relative;
+    background:
+        linear-gradient(90deg, red 25%, white 25%, white 28%, blue 28%, blue 34%,
+            white 34%, white 37%, red 37%);
+
+    width: 600px;
+    height: 400px;
+
+}
+
+.flag:nth-of-type(5)::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:
+        linear-gradient(180deg, transparent 42%, white 42%, white 46%, blue 46%,
+            blue 58%, white 58%, white 62%, transparent 62%);
+    width: 100%;
+    height: 400px;
+}
+
+.flag:nth-of-type(5)::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    background: linear-gradient(90deg, transparent 28%, blue 28%, blue 34%, transparent 34%);
+    width: 600px;
+    height: 400px;
+} 
+
+/* fin drapeau norvege */
+
+/* drapeau Bénin */
+.flag:nth-of-type(6) {
+    width: 600px;
+    height: 400px;
+    background-color: rgb(255, 255, 0);
+    position: relative;
+}
+
+.flag:nth-of-type(6)::before {
+    content: " ";
+    background-color: rgb(255, 0, 0);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+}
+
+.flag:nth-of-type(6)::after {
+    content: " ";
+    background-color: green;
+    position: absolute;
+    left: 0;
+    width: 35%;
+    height: 100%;
+}
+
+/* fin drapeau bénin */
+
+/* drapeau cameroun */
+
+.flag:last-of-type {
+    width: 600px;
+    height: 400px;
+    background-color: rgb(0, 128, 0);
+    position: relative;
+}
+
+.flag:last-of-type::before {
+    content: " ";
+    background: rgb(24,255,0);
+    background: linear-gradient(90deg, rgb(0, 128, 0) 33%, rgb(255, 0, 0) 33%, rgb(255, 0, 0) 66%, rgb(255,255,0) 66%, rgb(255,255,0) 80%);
+    position: absolute;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+}
+
+.flag:last-of-type::after{
+    content: "\2605";
+    color: yellow;
+    position: absolute;
+    transform: translateY(-50%) translateX(-50%);
+    font-size: 150px;
+    left: 50%;
+    top: 50%;
+}
+
+/* fin drapeau cameroun */
